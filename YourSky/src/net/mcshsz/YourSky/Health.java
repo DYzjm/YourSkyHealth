@@ -3,13 +3,13 @@ package net.mcshsz.YourSky;
 import java.text.NumberFormat;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-
+ 
 import net.mcshsz.api.Algorithm;
 
 public class Health implements Listener{
-
 
 	private Player Player;
 	private int nuber;
@@ -18,7 +18,6 @@ public class Health implements Listener{
 		// TODO 自动生成的构造函数存根
 		this.Player = Player;
 		this.nuber = nuber;
-
 	}
 	
 	/**
@@ -30,24 +29,21 @@ public class Health implements Listener{
 		if(percent>MaxHealth){
 			percent=MaxHealth;
 		}
-		//输出一下，确认你的小数无误
-		System.out.println("正在加血：" + percent);
-		//获取格式化对象
-
-		//最后格式化并输出
 		Player.setHealth(percent);
-		try {
-			Algorithm.flamex(Player);
-			
-			//Algorithm.cloud(Player);
-			//Algorithm.bubble(Player);
-			//Algorithm.flamex(Player);
-		} catch (InterruptedException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
+		Thread t = new Thread(new Runnable(){
+			public void run() {
+				try {
+					Algorithm.flamex(Player);
+					//Algorithm.cloud(Player);
+					//Algorithm.bubble(Player);
+					//Algorithm.flamex(Player);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-		
-		System.out.println("成功加血：" + percent);
+				); 
+		t.start();
 	}
 	/**
 	 * 按照玩家已有血的百分比加血（已有血液上加）
@@ -59,26 +55,25 @@ public class Health implements Listener{
 		double getMaxHealth = Player.getMaxHealth()-Player.getHealth();//玩家剩余血量！
 		double y = (nuber * 0.01 );
 		double percent = (y*getMaxHealth)+Health;//求Healths百分比的加血量！
-		//输出一下，确认你的小数无误
 		if(percent>MaxHealth){
 			percent=MaxHealth;
 		}
-		System.out.println("正在加血：" + percent);
-		//获取格式化对象
-
-		//最后格式化并输出
 		Player.setHealth(percent);
-		try {
-			Algorithm.cloud(Player);
-			//Algorithm.bubble(Player);
-			//Algorithm.flameq(Player);
-			//Algorithm.flamex(Player);
-
-		} catch (InterruptedException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
+		Thread t = new Thread(new Runnable(){
+			public void run() {
+				try {
+					Algorithm.cloud(Player);	
+					//Algorithm.cloud(Player);
+					//Algorithm.bubble(Player);
+					//Algorithm.flamex(Player);
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+			}
 		}
-		System.out.println("成功加血：" + percent);
+				); 
+		t.start();
 	}
 
 }
