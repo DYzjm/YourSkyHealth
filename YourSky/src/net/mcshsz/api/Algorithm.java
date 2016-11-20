@@ -16,7 +16,6 @@ import org.bukkit.entity.Player;
  */
 public class Algorithm {
 
-	
 	private static float circlePos = 0.0F;
 	private static float circlePoss = 0.0F;
 
@@ -25,8 +24,7 @@ public class Algorithm {
 	 * @param sender
 	 * @throws InterruptedException
 	 */
-	public static void  flamex(CommandSender sender) throws InterruptedException{
-		Player Player = (Player)sender;
+	public static void  flamex(Player Player) throws InterruptedException{
 		double higth = -1.0D;
 		double lon = 1.0D;
 		double topd = 0.0D;
@@ -67,8 +65,8 @@ public class Algorithm {
 		}
 	}
 
-	public static void  flameq(CommandSender sender) throws InterruptedException{
-		Player Player = (Player)sender;
+	public static void  flameq(Player Player) throws InterruptedException{
+
 		float offset = 0;
 		int amount=20;
 		double Ahead=10;
@@ -108,9 +106,8 @@ public class Algorithm {
 	 * @param sender
 	 * @throws InterruptedException
 	 */
-	public static void bubble(CommandSender sender) throws InterruptedException {
-		// TODO 自动生成的方法存根
-		Player Player = (Player)sender;
+	public static void bubble(Player Player) throws InterruptedException {
+ 
 		double higth = -1.0D;
 		double lon = 1.0D;
 		double topd = 0.0D;
@@ -151,9 +148,8 @@ public class Algorithm {
 		}
 	}
 	
-	public static void cloud(CommandSender sender) throws InterruptedException {
-		// TODO 自动生成的方法存根
-		Player Player = (Player)sender;
+	public static void cloud(Player Player) throws InterruptedException {
+ 
 		double higth = -1.0D;
 		double lon = 1.0D;
 		double topd = 0.0D;

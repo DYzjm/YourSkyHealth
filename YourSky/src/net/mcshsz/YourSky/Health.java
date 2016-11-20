@@ -6,6 +6,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
+import net.mcshsz.api.Algorithm;
+
 public class Health implements Listener{
 
 
@@ -34,6 +36,17 @@ public class Health implements Listener{
 
 		//最后格式化并输出
 		Player.setHealth(percent);
+		try {
+			Algorithm.flamex(Player);
+			
+			//Algorithm.cloud(Player);
+			//Algorithm.bubble(Player);
+			//Algorithm.flamex(Player);
+		} catch (InterruptedException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+		
 		System.out.println("成功加血：" + percent);
 	}
 	/**
@@ -55,6 +68,16 @@ public class Health implements Listener{
 
 		//最后格式化并输出
 		Player.setHealth(percent);
+		try {
+			Algorithm.cloud(Player);
+			//Algorithm.bubble(Player);
+			//Algorithm.flameq(Player);
+			//Algorithm.flamex(Player);
+
+		} catch (InterruptedException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
 		System.out.println("成功加血：" + percent);
 	}
 
