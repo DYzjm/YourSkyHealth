@@ -42,13 +42,13 @@ public class command implements Listener{
 		 * 权限：your.admin
 		 */
 		if(cmd.getName().equalsIgnoreCase("your")&&(args.length == 0)){
-			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家  百分值   &2&l 在玩家总血的基础上进行百分比加血，会替换已有血液！"));
-			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家  百分值    &2&l在玩家总血且已有血液的基础上进行百分比加血！ "));
+			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家 百分值 &2&l进行百分比加血，替换已有血液！"));
+			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家 百分值 &2&l血液的基础上进行百分比加血！ "));
 			return false;
 		}
 		if(cmd.getName().equalsIgnoreCase("yourx")&&(args.length == 0)){
-			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家  百分值   &2&l 在玩家总血的基础上进行百分比加血，会替换已有血液！"));
-			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家  百分值    &2&l在玩家总血且已有血液的基础上进行百分比加血！ "));
+			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家 百分值 &2&l进行百分比加血，替换已有血液！"));
+			Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家 百分值 &2&l血液的基础上进行百分比加血！"));
 			return false;
 		}
 		
@@ -60,8 +60,8 @@ public class command implements Listener{
 					Health.HealthS();
 					return true; 
 				}catch (Exception e) {
-					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家  百分值    &2&l在玩家总血的基础上进行百分比加血，会替换已有血液！"));
-					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&l例如： /your "+Player.getName()+" 10  &2&l为"+Player.getName()+"设置10%的血液"));
+					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/your 玩家 百分值 &2&l进行百分比加血，替换已有血液！"));
+					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&l例如： /your "+Player.getName()+"10 &2&l为"+Player.getName()+"设置10%的血液"));
 				}
 				return false;
 			}
@@ -76,8 +76,8 @@ public class command implements Listener{
 					return true; 
 					
 				}catch (Exception e) {
-					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家  百分值   &2&l在玩家总血且已有血液的基础上进行百分比加血！ 100%是满血！"));
-					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&l例如： /yourx "+Player.getName()+" 10 &2&l为"+Player.getName()+"增加10%的血液"));
+					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6&l/yourx 玩家 百分值 &2&l血液的基础上进行百分比加血！"));
+					Player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&l例如：/yourx "+Player.getName()+" 10 &2&l为"+Player.getName()+"增加10%的血液"));
 				}
 				return false;
 			}
