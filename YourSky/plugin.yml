@@ -1,0 +1,14 @@
+name: YourSky
+author: YourSky
+version: 1.0
+main: net.mcshsz.YourSky.YourSky
+author: YourSky回血插件
+commands:
+  your:
+    description: /your
+    permission: your.admin
+    permission-message:  您需要权限哦！[your.admin]
+  yourx:
+    description: /yourx
+    permission: yourx.admin
+    permission-message:  您需要权限哦！[yourx.admin]
